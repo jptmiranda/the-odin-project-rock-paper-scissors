@@ -9,17 +9,10 @@ let rounds = prompt("How many rounds would you like to play?", 5)
 function getComputerChoice() {
     let value
     value = Math.floor(Math.random() * 3);
-
-    if (value == 1) {
-
-        return "rock"
-    } else if (value == 2) {
-
-        return "paper"
-    } else {
-
-        return "scissors"
-    }
+    
+    const choices = ["rock", "paper", "scissors"]
+    
+    return choices[value - 1]
 }
 
 function finalScore() {
